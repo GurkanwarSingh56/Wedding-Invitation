@@ -85,7 +85,7 @@ export default function Family() {
         </div>
 
         {/* Closing Warm Blessing Line */}
-        <p className={`mt-10 text-sm md:text-base text-[#536479] italic ${isPunjabi ? 'font-punjabi' : 'font-serif'}`}>
+        <p className={`mt-10 text-sm md:text-xl text-[#536479] italic ${isPunjabi ? 'font-punjabi' : 'font-serif font-bold'}`}>
           {isPunjabi ? invitationMessage.closingPunjabi : invitationMessage.closing}
         </p>
       </motion.div>

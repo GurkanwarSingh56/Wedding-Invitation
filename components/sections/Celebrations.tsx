@@ -25,24 +25,7 @@ export default function Celebrations() {
           PART 1: 13 NOVEMBER — PATH • KIRTAN • LANGAR (Spiritual & Peaceful)
          ───────────────────────────────────────────────────────────── */}
       <section className="py-24 md:py-32 px-4 relative bg-[#FAF7F2] border-t border-[#C5A880]/30 overflow-hidden">
-        {/* Subtle decorative floral background watermark */}
-        <div className="absolute inset-0 opacity-[0.03] pointer-events-none flex items-center justify-center">
-          <span className="text-[280px] font-punjabi select-none">ੴ</span>
-        </div>
-
         <div className="max-w-3xl mx-auto text-center relative z-10">
-          {/* Subtle Ik Onkar */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeUp}
-            className="mb-6 flex flex-col items-center"
-          >
-            <span className="text-3xl md:text-4xl text-[#C5A880] font-punjabi">ੴ</span>
-            <div className="w-8 h-[1px] bg-[#C5A880]/40 mt-3"></div>
-          </motion.div>
-
           {/* Date & Day Header */}
           <motion.p
             initial="hidden"
