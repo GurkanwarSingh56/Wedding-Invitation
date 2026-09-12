@@ -28,18 +28,18 @@ const greatVibes = Great_Vibes({
 });
 
 export const metadata: Metadata = {
-  title: "Dilpreet Kaur | The Bride's Side",
-  description: "With the blessings of Waheguru Ji, the Kaur family warmly invites you to celebrate Dilpreet Kaur's wedding festivities.",
+  title: "Dilpreet Kaur & Puneet Saini | Wedding Invitation",
+  description: "With the blessings of Waheguru Ji, you are cordially invited to celebrate the wedding celebrations of Dilpreet Kaur and Puneet Saini.",
   metadataBase: new URL('https://dilpreet-wedding.vercel.app'),
   openGraph: {
-    title: "Dilpreet Kaur | The Bride's Side",
-    description: "With the blessings of Waheguru Ji, the Kaur family warmly invites you to celebrate Dilpreet Kaur's wedding festivities.",
+    title: "Dilpreet Kaur & Puneet Saini | Wedding Invitation",
+    description: "With the blessings of Waheguru Ji, you are cordially invited to celebrate the wedding celebrations of Dilpreet Kaur and Puneet Saini.",
     images: [{ url: "/images/hero-placeholder.jpg" }],
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#F7EFDF",
+  themeColor: "#FAF7F2",
 };
 
 export default function RootLayout({
@@ -49,7 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${cormorant.variable} ${dmSans.variable} ${notoGurmukhi.variable} ${greatVibes.variable} scroll-smooth`}>
-      <body className="antialiased min-h-screen selection:bg-[#B08A45] selection:text-white">
+      <body className="antialiased min-h-screen selection:bg-[#C5A880] selection:text-[#0F223D]">
         <LanguageProvider>
           {children}
         </LanguageProvider>

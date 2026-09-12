@@ -10,14 +10,11 @@ export default function MusicPlayer() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    // We create the audio element only on client side to avoid hydration mismatch
     audioRef.current = new Audio("/audio/wedding-music.mp3");
     audioRef.current.loop = true;
     
-    // Check saved preference
     const savedPreference = localStorage.getItem("wedding-music-playing");
     if (savedPreference === "true") {
-      // Browsers often block autoplay without interaction, but we can try
       audioRef.current.play().then(() => {
         setIsPlaying(true);
       }).catch(() => {
@@ -50,10 +47,11 @@ export default function MusicPlayer() {
   return (
     <button
       onClick={togglePlay}
-      className={`fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-[#F7EFDF]/80 backdrop-blur-md border border-[#B08A45]/30 px-4 py-2 rounded-full text-xs tracking-widest text-[#594337] hover:text-[#641F28] transition-colors shadow-sm ${isPunjabi ? 'font-punjabi' : ''}`}
+      className={`fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-[#FAF7F2]/90 backdrop-blur-md border border-[#C5A880]/40 px-4 py-2 rounded-full text-xs tracking-widest text-[#536479] hover:text-[#0F223D] hover:border-[#0F223D]/50 transition-colors shadow-sm ${isPunjabi ? 'font-punjabi' : 'font-sans'}`}
+      aria-label="Toggle ambient background music"
     >
-      {isPlaying ? <Music className="w-3 h-3 animate-pulse" /> : <Music3 className="w-3 h-3" />}
-      {isPunjabi ? "ਸੰਗੀਤ" : "MUSIC"}
+      {isPlaying ? <Music className="w-3.5 h-3.5 animate-pulse text-[#C5A880]" /> : <Music3 className="w-3.5 h-3.5 text-[#536479]" />}
+      <span className="font-medium text-[11px]">{isPunjabi ? "ਸੰਗੀਤ" : "MUSIC"}</span>
     </button>
   );
 }

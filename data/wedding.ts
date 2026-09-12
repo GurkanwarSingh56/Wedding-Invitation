@@ -1,3 +1,22 @@
+export interface EventItem {
+  name: string;
+  namePunjabi: string;
+  time: string;
+  timePunjabi: string;
+  description?: string;
+  descriptionPunjabi?: string;
+}
+
+export interface VenueInfo {
+  name: string;
+  namePunjabi: string;
+  address: string;
+  addressPunjabi: string;
+  city: string;
+  cityPunjabi: string;
+  googleMapsUrl?: string;
+}
+
 export const weddingData = {
   bride: {
     first: "Dilpreet",
@@ -11,60 +30,108 @@ export const weddingData = {
     full: "Puneet Saini",
     punjabi: "ਪੁਨੀਤ ਸੈਣੀ",
   },
+  // Grandparents must appear BEFORE parents as requested
+  grandparents: {
+    grandmother: "Sardarni Kulwant Kaur",
+    grandfather: "Sr. Ajit Singh",
+    grandmotherPunjabi: "ਸਰਦਾਰਨੀ ਕੁਲਵੰਤ ਕੌਰ",
+    grandfatherPunjabi: "ਸ੍ਰ. ਅਜੀਤ ਸਿੰਘ",
+    title: "Grandparents",
+    titlePunjabi: "ਦਾਦਾ-ਦਾਦੀ ਜੀ",
+  },
   parents: {
     mother: "Sdn. Amandeep Kaur",
     father: "S. Amarjit Singh",
     motherPunjabi: "ਸਰਦਾਰਨੀ ਅਮਨਦੀਪ ਕੌਰ",
-    fatherPunjabi: "ਸਰਦਾਰ ਅਮਰਜੀਤ ਸਿੰਘ",
+    fatherPunjabi: "ਸ. ਅਮਰਜੀਤ ਸਿੰਘ",
+    title: "Parents",
+    titlePunjabi: "ਮਾਤਾ-ਪਿਤਾ ਜੀ",
   },
   dates: {
-    events: "13 — 14 NOVEMBER 2026",
-    eventsPunjabi: "13 — 14 ਨਵੰਬਰ 2026",
-    weddingDate: "14 November 2026",
-    weddingDatePunjabi: "14 ਨਵੰਬਰ 2026",
+    day1Date: "13 NOVEMBER 2026",
+    day1Day: "FRIDAY",
+    day1DatePunjabi: "13 ਨਵੰਬਰ 2026",
+    day1DayPunjabi: "ਸ਼ੁੱਕਰਵਾਰ",
+
+    day2Date: "14 NOVEMBER 2026",
+    day2Day: "SATURDAY",
+    day2DatePunjabi: "14 ਨਵੰਬਰ 2026",
+    day2DayPunjabi: "ਸ਼ਨੀਵਾਰ",
+
     countdownTarget: "2026-11-14T10:00:00+05:30", // IST time for Anand Karaj
   },
   venues: {
-    wedding: {
+    pathGurudwara: {
+      name: "Gurudwara Baba Baghel Singh",
+      namePunjabi: "ਗੁਰਦੁਆਰਾ ਬਾਬਾ ਬਘੇਲ ਸਿੰਘ",
+      address: "Hariana, Distt. Hoshiarpur",
+      addressPunjabi: "ਹਰਿਆਣਾ, ਜ਼ਿਲ੍ਹਾ ਹੁਸ਼ਿਆਰਪੁਰ",
+      city: "Hoshiarpur, Punjab",
+      cityPunjabi: "ਹੁਸ਼ਿਆਰਪੁਰ, ਪੰਜਾਬ",
+      googleMapsUrl: "https://maps.google.com/?q=Gurudwara+Baba+Baghel+Singh+Hariana+Hoshiarpur",
+    },
+    anandKaraj: {
       name: "Maharaja Farms",
       namePunjabi: "ਮਹਾਰਾਜਾ ਫਾਰਮਜ਼",
       address: "Tanda Road, Hoshiarpur",
       addressPunjabi: "ਟਾਂਡਾ ਰੋਡ, ਹੁਸ਼ਿਆਰਪੁਰ",
       city: "Hoshiarpur, Punjab",
       cityPunjabi: "ਹੁਸ਼ਿਆਰਪੁਰ, ਪੰਜਾਬ",
-      googleMapsUrl: "https://maps.google.com/?q=Maharaja+Farms,+Tanda+Road,+Hoshiarpur", // Placeholder based on instruction "Only add a Google Maps link if a valid URL is supplied, make it easy to edit later"
+      googleMapsUrl: "https://maps.google.com/?q=Maharaja+Farms+Tanda+Road+Hoshiarpur",
     },
   },
   events: {
-    day1: {
-      title: "13 NOVEMBER",
-      titlePunjabi: "13 ਨਵੰਬਰ",
-      subtitle: "FRIDAY",
-      subtitlePunjabi: "ਸ਼ੁੱਕਰਵਾਰ",
+    // 13 November 2026 (Friday) - Path, Kirtan, Langar
+    day1Spiritual: {
+      date: "13 NOVEMBER 2026",
+      day: "FRIDAY",
+      datePunjabi: "13 ਨਵੰਬਰ 2026",
+      dayPunjabi: "ਸ਼ੁੱਕਰਵਾਰ",
+      title: "PATH • KIRTAN • LANGAR",
+      titlePunjabi: "ਪਾਠ • ਕੀਰਤਨ • ਲੰਗਰ",
       path: {
         name: "PATH SHRI SUKHMANI SAHIB",
         namePunjabi: "ਸ੍ਰੀ ਸੁਖਮਨੀ ਸਾਹਿਬ ਪਾਠ",
         time: "10:00 AM",
         timePunjabi: "ਸਵੇਰੇ 10:00 ਵਜੇ",
       },
-      haldi: {
-        name: "HALDI",
-        namePunjabi: "ਹਲਦੀ",
-        time: "TIME TO BE ANNOUNCED",
-        timePunjabi: "ਸਮਾਂ ਜਲਦੀ ਦੱਸਿਆ ਜਾਵੇਗਾ",
+      kirtan: {
+        name: "KIRTAN",
+        namePunjabi: "ਕੀਰਤਨ",
+        time: "11:00 AM",
+        timePunjabi: "ਸਵੇਰੇ 11:00 ਵਜੇ",
       },
-      jaggo: {
-        name: "JAGGO",
-        namePunjabi: "ਜਾਗੋ",
-        time: "TIME TO BE ANNOUNCED",
-        timePunjabi: "ਸਮਾਂ ਜਲਦੀ ਦੱਸਿਆ ਜਾਵੇਗਾ",
+      langar: {
+        name: "GURU KA LANGAR",
+        namePunjabi: "ਗੁਰੂ ਕਾ ਲੰਗਰ",
+        time: "1:00 PM",
+        timePunjabi: "ਦੁਪਹਿਰ 1:00 ਵਜੇ",
       },
     },
-    day2: {
-      title: "14 NOVEMBER",
-      titlePunjabi: "14 ਨਵੰਬਰ",
-      subtitle: "SATURDAY",
-      subtitlePunjabi: "ਸ਼ਨੀਵਾਰ",
+    // 13 November 2026 (Friday) - Jaggo & DJ
+    jaggo: {
+      title: "JAGGO",
+      titlePunjabi: "ਜਾਗੋ",
+      secondaryTitle: "DJ",
+      secondaryTitlePunjabi: "ਡੀਜੇ",
+      date: "13 NOVEMBER 2026",
+      day: "FRIDAY",
+      datePunjabi: "13 ਨਵੰਬਰ 2026",
+      dayPunjabi: "ਸ਼ੁੱਕਰਵਾਰ",
+      // Important: time is unconfirmed, set to ""
+      time: "", 
+      timePunjabi: "",
+      defaultTimeText: "TIME TO BE ANNOUNCED",
+      defaultTimeTextPunjabi: "ਸਮਾਂ ਜਲਦੀ ਦੱਸਿਆ ਜਾਵੇਗਾ",
+    },
+    // 14 November 2026 (Saturday) - Anand Karaj
+    weddingDay: {
+      sectionTitle: "THE WEDDING DAY",
+      sectionTitlePunjabi: "ਵਿਆਹ ਦਾ ਦਿਨ",
+      date: "14 NOVEMBER 2026",
+      day: "SATURDAY",
+      datePunjabi: "14 ਨਵੰਬਰ 2026",
+      dayPunjabi: "ਸ਼ਨੀਵਾਰ",
       barat: {
         name: "RECEPTION OF BARAT",
         namePunjabi: "ਬਾਰਾਤ ਦਾ ਸਵਾਗਤ",
@@ -77,10 +144,26 @@ export const weddingData = {
         time: "10:00 AM",
         timePunjabi: "ਸਵੇਰੇ 10:00 ਵਜੇ",
       },
-    }
+      lunch: {
+        name: "FOLLOWED BY LUNCH",
+        namePunjabi: "ਅਨੰਦ ਕਾਰਜ ਉਪਰੰਤ ਲੰਗਰ / ਦੁਪਹਿਰ ਦਾ ਭੋਜਨ",
+        venueName: "Maharaja Farms",
+        venueNamePunjabi: "ਮਹਾਰਾਜਾ ਫਾਰਮਜ਼",
+        address: "Tanda Road, Hoshiarpur",
+        addressPunjabi: "ਟਾਂਡਾ ਰੋਡ, ਹੁਸ਼ਿਆਰਪੁਰ",
+      },
+    },
+  },
+  invitationMessage: {
+    title: "With Joyous Hearts",
+    titlePunjabi: "ਖੁਸ਼ੀਆਂ ਭਰਿਆ ਸੱਦਾ",
+    lead: "With hearts full of gratitude and love, we warmly invite you to grace the wedding celebrations of our beloved Dilpreet with Puneet.",
+    leadPunjabi: "ਵਾਹਿਗੁਰੂ ਜੀ ਦੀ ਅਪਾਰ ਕਿਰਪਾ ਸਦਕਾ, ਅਸੀਂ ਤੁਹਾਨੂੰ ਆਪਣੀ ਲਾਡਲੀ ਦਿਲਪ੍ਰੀਤ ਅਤੇ ਪੁਨੀਤ ਦੇ ਵਿਆਹ ਸਮਾਗਮਾਂ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋ ਕੇ ਖੁਸ਼ੀਆਂ ਵਧਾਉਣ ਲਈ ਦਿਲੋਂ ਸੱਦਾ ਦਿੰਦੇ ਹਾਂ।",
+    closing: "Your blessings and warm presence will make these auspicious moments truly memorable for our family.",
+    closingPunjabi: "ਆਪ ਜੀ ਦੀਆਂ ਅਸੀਸਾਂ ਅਤੇ ਪਿਆਰੀ ਹਾਜ਼ਰੀ ਸਾਡੇ ਪਰਿਵਾਰ ਲਈ ਇਹਨਾਂ ਪਲਾਂ ਨੂੰ ਸਦਾ ਲਈ ਯਾਦਗਾਰ ਬਣਾ ਦੇਵੇਗੀ।",
   },
   rsvp: {
-    whatsappNumber: "919876543210", // Edit this to the actual phone number
+    whatsappNumber: "919876543210", // Easy to edit
   },
   images: {
     hero: "/images/hero-placeholder.jpg",

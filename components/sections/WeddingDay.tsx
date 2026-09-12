@@ -1,80 +1,140 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { useLanguage } from "@/lib/LanguageContext";
 import { weddingData } from "@/data/wedding";
+import { MapPin } from "lucide-react";
 
 export default function WeddingDay() {
   const { isPunjabi } = useLanguage();
-  const day2 = weddingData.events.day2;
+  const { weddingDay } = weddingData.events;
+  const { anandKaraj: venue } = weddingData.venues;
 
-  const fadeUp = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 1 } }
+  const fadeUp: Variants = {
+    hidden: { opacity: 0, y: 25 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } }
   };
 
   return (
-    <section className="bg-white">
-      {/* Intro */}
-      <div className="py-32 px-6 text-center max-w-3xl mx-auto border-t border-[#B08A45]/20">
-        <motion.p 
-          initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-          className={`text-sm tracking-widest text-[#B08A45] mb-4 uppercase ${isPunjabi ? 'font-punjabi' : ''}`}
-        >
-          {isPunjabi ? day2.titlePunjabi : day2.title} • {isPunjabi ? day2.subtitlePunjabi : day2.subtitle}
-        </motion.p>
-        
-        <motion.h2 
-          initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-          className={`text-4xl md:text-6xl text-[#641F28] mb-8 ${isPunjabi ? 'font-punjabi' : 'font-serif'}`}
-        >
-          {isPunjabi ? "ਵਿਆਹ ਦਾ ਦਿਨ" : "THE WEDDING DAY"}
-        </motion.h2>
-
-        <motion.p 
-          initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-          className={`text-xl text-[#594337] italic ${isPunjabi ? 'font-punjabi' : 'font-serif'}`}
-        >
-          {isPunjabi ? "ਤੇ ਫਿਰ ਆਉਂਦਾ ਹੈ ਉਹ ਦਿਨ ਜਿਸ ਦੀ ਸਭ ਨੂੰ ਉਡੀਕ ਸੀ।" : "And then comes the day we've been waiting for."}
-        </motion.p>
+    <section className="py-24 md:py-32 px-4 relative bg-[#FAF7F2] border-t border-[#C5A880]/30 overflow-hidden">
+      {/* Outer frame styling */}
+      <div className="absolute inset-4 md:inset-8 border border-[#C5A880]/30 pointer-events-none rounded-sm">
+        <div className="absolute top-2 left-2 w-6 h-6 border-t-2 border-l-2 border-[#C5A880]/50"></div>
+        <div className="absolute top-2 right-2 w-6 h-6 border-t-2 border-r-2 border-[#C5A880]/50"></div>
+        <div className="absolute bottom-2 left-2 w-6 h-6 border-b-2 border-l-2 border-[#C5A880]/50"></div>
+        <div className="absolute bottom-2 right-2 w-6 h-6 border-b-2 border-r-2 border-[#C5A880]/50"></div>
       </div>
 
-      {/* Barat */}
-      <div className="py-24 px-6 relative">
-        <motion.div 
-          initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-          className="max-w-xl mx-auto text-center"
+      <div className="max-w-3xl mx-auto text-center relative z-10 px-4">
+        {/* Section Header */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+          className="mb-16"
         >
-          <div className="w-12 h-[1px] bg-[#B08A45] mx-auto mb-8"></div>
-          <h3 className={`text-3xl md:text-4xl text-[#641F28] mb-4 ${isPunjabi ? 'font-punjabi' : 'font-serif'}`}>
-            {isPunjabi ? day2.barat.namePunjabi : day2.barat.name}
-          </h3>
-          <p className={`text-[#B08A45] tracking-widest uppercase text-sm ${isPunjabi ? 'font-punjabi' : ''}`}>
-            {isPunjabi ? day2.barat.timePunjabi : day2.barat.time}
-          </p>
-        </motion.div>
-      </div>
-
-      {/* Anand Karaj */}
-      <div className="py-32 px-6 relative bg-[#F7EFDF]">
-        <motion.div 
-          initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-          className="max-w-xl mx-auto text-center"
-        >
-          <div className="text-4xl text-[#B08A45] mb-10 font-punjabi">ੴ</div>
-          
-          <h3 className={`text-4xl md:text-5xl text-[#641F28] mb-8 ${isPunjabi ? 'font-punjabi' : 'font-serif'}`}>
-            {isPunjabi ? day2.anandKaraj.namePunjabi : day2.anandKaraj.name}
-          </h3>
-          
-          <p className={`text-[#B08A45] tracking-widest uppercase text-sm mb-12 ${isPunjabi ? 'font-punjabi' : ''}`}>
-            {isPunjabi ? day2.anandKaraj.timePunjabi : day2.anandKaraj.time}
+          <p className={`text-xs md:text-sm tracking-[0.25em] text-[#536479] uppercase mb-3 ${isPunjabi ? 'font-punjabi font-medium' : 'font-sans'}`}>
+            {isPunjabi ? `${weddingDay.datePunjabi} • ${weddingDay.dayPunjabi}` : `${weddingDay.date} • ${weddingDay.day}`}
           </p>
 
-          <p className={`text-xl text-[#594337] italic leading-relaxed ${isPunjabi ? 'font-punjabi' : 'font-serif'}`}>
-            {isPunjabi ? "ਦੋ ਰੂਹਾਂ, ਇੱਕ ਰਾਹ,\nਵਾਹਿਗੁਰੂ ਦੀ ਮੇਹਰ ਸਦਕਾ।" : "Two souls, one path,\nunder the blessings of Waheguru."}
+          <h2 className={`text-4xl md:text-6xl text-[#0F223D] font-medium tracking-wide mb-6 ${isPunjabi ? 'font-punjabi' : 'font-serif'}`}>
+            {isPunjabi ? weddingDay.sectionTitlePunjabi : weddingDay.sectionTitle}
+          </h2>
+
+          <div className="w-12 h-[1px] bg-[#C5A880]/60 mx-auto mb-6"></div>
+
+          <p className={`text-base md:text-lg text-[#536479] italic max-w-lg mx-auto ${isPunjabi ? 'font-punjabi' : 'font-serif'}`}>
+            {isPunjabi 
+              ? "ਸ਼ਗਨਾਂ ਦਾ ਦਿਨ, ਅਰਦਾਸਾਂ ਦਾ ਸਾਥ ਅਤੇ ਦੋ ਰੂਹਾਂ ਦਾ ਇੱਕ ਪਵਿੱਤਰ ਬੰਧਨ।"
+              : "The sacred day of love, solemn vows, and divine blessings."}
           </p>
         </motion.div>
+
+        {/* Schedule & Unified Anand Karaj Section */}
+        <div className="space-y-12">
+          {/* 1. Reception of Barat */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="bg-[#FAF7F2] p-6 border border-[#C5A880]/20 rounded-sm max-w-xl mx-auto"
+          >
+            <h3 className={`text-2xl md:text-3xl text-[#0F223D] font-medium mb-2 ${isPunjabi ? 'font-punjabi' : 'font-serif'}`}>
+              {isPunjabi ? weddingDay.barat.namePunjabi : weddingDay.barat.name}
+            </h3>
+            <p className={`text-xs md:text-sm tracking-[0.2em] text-[#C5A880] uppercase font-medium ${isPunjabi ? 'font-punjabi' : 'font-sans'}`}>
+              {isPunjabi ? weddingDay.barat.timePunjabi : weddingDay.barat.time}
+            </p>
+          </motion.div>
+
+          {/* 2. Anand Karaj (Main Focus with Sacred ੴ, Location & Connected Lunch) */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="bg-[#F8F4EC] border-2 border-[#C5A880]/40 p-8 md:p-12 relative rounded-sm shadow-sm max-w-2xl mx-auto"
+          >
+            {/* Sacred ੴ */}
+            <div className="mb-4">
+              <span className="text-4xl text-[#C5A880] font-punjabi select-none">ੴ</span>
+            </div>
+
+            <h3 className={`text-3xl sm:text-5xl text-[#0F223D] font-medium tracking-wide mb-3 ${isPunjabi ? 'font-punjabi' : 'font-serif'}`}>
+              {isPunjabi ? weddingDay.anandKaraj.namePunjabi : weddingDay.anandKaraj.name}
+            </h3>
+
+            <p className={`text-sm md:text-base tracking-[0.2em] text-[#C5A880] uppercase font-medium mb-8 ${isPunjabi ? 'font-punjabi' : 'font-sans'}`}>
+              {isPunjabi ? weddingDay.anandKaraj.timePunjabi : weddingDay.anandKaraj.time}
+            </p>
+
+            <div className="w-16 h-[1px] bg-[#C5A880]/50 mx-auto mb-8"></div>
+
+            {/* Anand Karaj Location Display */}
+            <div className="mb-10">
+              <div className="flex items-center justify-center gap-2 mb-2 text-[#C5A880]">
+                <MapPin className="w-4 h-4" />
+                <span className={`text-xs tracking-[0.2em] uppercase font-medium ${isPunjabi ? 'font-punjabi' : 'font-sans'}`}>
+                  {isPunjabi ? "ਸਥਾਨ" : "LOCATION"}
+                </span>
+              </div>
+              <p className={`text-2xl md:text-3xl text-[#0F223D] font-medium mb-1 ${isPunjabi ? 'font-punjabi' : 'font-serif'}`}>
+                {isPunjabi ? venue.namePunjabi : venue.name}
+              </p>
+              <p className={`text-sm text-[#536479] mb-6 ${isPunjabi ? 'font-punjabi' : 'font-sans'}`}>
+                {isPunjabi ? venue.addressPunjabi : venue.address}
+              </p>
+
+              {venue.googleMapsUrl && (
+                <a
+                  href={venue.googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`inline-block border border-[#0F223D] px-7 py-3 text-xs tracking-[0.2em] text-[#0F223D] hover:bg-[#0F223D] hover:text-[#FAF7F2] transition-colors duration-300 uppercase font-medium ${isPunjabi ? 'font-punjabi' : 'font-sans'}`}
+                >
+                  {isPunjabi ? "ਸਥਾਨ ਵੇਖੋ" : "VIEW LOCATION"}
+                </a>
+              )}
+            </div>
+
+            {/* 3. Followed By Lunch - Visually Connected Sub-block */}
+            <div className="pt-8 border-t border-[#C5A880]/30">
+              <span className={`text-xs tracking-[0.2em] text-[#C5A880] uppercase block mb-2 font-medium ${isPunjabi ? 'font-punjabi' : 'font-sans'}`}>
+                ✦
+              </span>
+              <h4 className={`text-xl md:text-2xl text-[#0F223D] font-medium tracking-wide mb-2 ${isPunjabi ? 'font-punjabi' : 'font-serif'}`}>
+                {isPunjabi ? weddingDay.lunch.namePunjabi : weddingDay.lunch.name}
+              </h4>
+              <p className={`text-sm text-[#536479] ${isPunjabi ? 'font-punjabi' : 'font-sans'}`}>
+                {isPunjabi 
+                  ? `${weddingDay.lunch.venueNamePunjabi}, ${weddingDay.lunch.addressPunjabi}`
+                  : `${weddingDay.lunch.venueName}, ${weddingDay.lunch.address}`}
+              </p>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

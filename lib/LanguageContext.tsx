@@ -15,18 +15,29 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [language, setLanguage] = useState<Language>('en');
 
-  // Hydration safety for localStorage if we want to persist it
+  // Hydration safety for localStorage
   useEffect(() => {
-    const saved = localStorage.getItem('wedding-lang') as Language;
-    if (saved === 'en' || saved === 'pa') {
-      setLanguage(saved);
+    try {
+      const saved = localStorage.getItem('wedding-lang') as Language;
+      if ((saved === 'en' || saved === 'pa') && saved !== 'en') {
+        // Schedule update asynchronously to prevent cascading render in effect
+        requestAnimationFrame(() => {
+          setLanguage(saved);
+        });
+      }
+    } catch {
+      // Ignore storage errors
     }
   }, []);
 
   const toggleLanguage = () => {
     setLanguage(prev => {
       const next = prev === 'en' ? 'pa' : 'en';
-      localStorage.setItem('wedding-lang', next);
+      try {
+        localStorage.setItem('wedding-lang', next);
+      } catch {
+        // Ignore storage errors
+      }
       return next;
     });
   };
