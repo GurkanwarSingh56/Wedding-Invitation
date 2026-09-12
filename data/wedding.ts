@@ -119,8 +119,8 @@ export const weddingData = {
       datePunjabi: "13 ਨਵੰਬਰ 2026",
       dayPunjabi: "ਸ਼ੁੱਕਰਵਾਰ",
       // Important: time is unconfirmed, set to ""
-      time: "", 
-      timePunjabi: "",
+      time: "6:00 PM",
+      timePunjabi: "ਸ਼ਾਮ 6:00 ਵਜੇ",
       defaultTimeText: "TIME TO BE ANNOUNCED",
       defaultTimeTextPunjabi: "ਸਮਾਂ ਜਲਦੀ ਦੱਸਿਆ ਜਾਵੇਗਾ",
     },
@@ -166,13 +166,33 @@ export const weddingData = {
     whatsappNumber: "919876543210", // Easy to edit
   },
   images: {
-    hero: "/images/hero-placeholder.jpg",
+    hero: "/images/hero.jpg",
     gallery: [
-      "/images/gallery-placeholder-1.jpg",
-      "/images/gallery-placeholder-2.jpg",
-      "/images/gallery-placeholder-3.jpg",
-      "/images/gallery-placeholder-4.jpg",
-      "/images/gallery-placeholder-5.jpg",
+      {
+        src: "/images/gallery-1.jpg",
+        title: "Anand Karaj • Sacred Presence",
+        titlePunjabi: "ਅਨੰਦ ਕਾਰਜ • ਗੁਰੂ ਹਜ਼ੂਰੀ",
+      },
+      {
+        src: "/images/gallery-2.jpg",
+        title: "The Sacred Palla Ceremony",
+        titlePunjabi: "ਪੱਲੇ ਦੀ ਰਸਮ",
+      },
+      {
+        src: "/images/gallery-3.jpg",
+        title: "The Four Holy Laavan",
+        titlePunjabi: "ਚਾਰ ਲਾਵਾਂ ਦੀ ਪਰਕਰਮਾ",
+      },
+      {
+        src: "/images/gallery-4.jpg",
+        title: "Dilpreet & Puneet",
+        titlePunjabi: "ਦਿਲਪ੍ਰੀਤ ਅਤੇ ਪੁਨੀਤ",
+      },
+      {
+        src: "/images/gallery-5.jpg",
+        title: "Under Divine Grace",
+        titlePunjabi: "ਗੁਰੂ ਸਾਹਿਬ ਦੀ ਅਪਾਰ ਕਿਰਪਾ",
+      },
     ],
   },
 };
