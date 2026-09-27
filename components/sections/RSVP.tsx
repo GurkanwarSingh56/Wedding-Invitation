@@ -8,15 +8,6 @@ import { Phone } from "lucide-react";
 export default function RSVP() {
   const { isPunjabi } = useLanguage();
   const { rsvp } = weddingData;
-  
-  const handleRSVP = (status: 'yes' | 'no') => {
-    const text = isPunjabi 
-      ? `ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ ਜੀ, ਅਸੀਂ ਦਿਲਪ੍ਰੀਤ ਕੌਰ ਅਤੇ ਪੁਨੀਤ ਸਿੰਘ ਦੇ ਵਿਆਹ ਵਿੱਚ ${status === 'yes' ? 'ਜ਼ਰੂਰ ਸ਼ਾਮਲ ਹੋਵਾਂਗੇ।' : 'ਕਿਸੇ ਕਾਰਨ ਸ਼ਾਮਲ ਨਹੀਂ ਹੋ ਸਕਾਂਗੇ।'}`
-      : `Sat Sri Akal Ji, we ${status === 'yes' ? 'will be delighted to attend' : 'regret that we are unable to attend'} Dilpreet Kaur & Puneet Singh's wedding celebrations.`;
-      
-    const url = `https://wa.me/${rsvp.whatsappNumber}?text=${encodeURIComponent(text)}`;
-    window.open(url, '_blank');
-  };
 
   return (
     <section className="py-20 md:py-28 px-4 bg-[#0F223D] text-[#FAF7F2] border-t border-[#C5A880]/30 relative overflow-hidden">
@@ -65,28 +56,11 @@ export default function RSVP() {
 
         <div className="w-12 h-[1px] bg-[#C5A880]/60 mx-auto mb-6"></div>
 
-        <p className={`text-sm sm:text-base md:text-lg text-[#D4E0EB]/90 italic mb-10 leading-relaxed max-w-lg mx-auto ${isPunjabi ? 'font-punjabi' : 'font-serif'}`}>
+        <p className={`text-sm sm:text-base md:text-lg text-[#D4E0EB]/90 italic mb-12 leading-relaxed max-w-lg mx-auto ${isPunjabi ? 'font-punjabi' : 'font-serif'}`}>
           {isPunjabi 
             ? "ਜਸ਼ਨ ਤਾਂ ਖਾਸ ਹੁੰਦੇ ਹੀ ਹਨ,\nਪਰ ਉਹ ਆਪਣੇ ਪਿਆਰਿਆਂ ਦੇ ਸਾਥ ਨਾਲ ਹੀ ਅਸਲ ਵਿੱਚ ਯਾਦਗਾਰ ਬਣਦੇ ਹਨ।" 
             : "Some celebrations are special because of the occasion.\nThey become unforgettable because of the loved ones who stand beside us."}
         </p>
-
-        {/* WhatsApp Quick RSVP Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-md mx-auto mb-14 sm:mb-16">
-          <button 
-            onClick={() => handleRSVP('yes')}
-            className={`w-full sm:w-auto flex-1 bg-[#FAF7F2] border border-[#FAF7F2] px-7 py-3 text-xs tracking-[0.2em] text-[#0F223D] hover:bg-[#FAF7F2]/90 transition-colors duration-300 uppercase font-semibold shadow-sm rounded-sm ${isPunjabi ? 'font-punjabi' : 'font-sans'}`}
-          >
-            {isPunjabi ? "ਮੈਂ ਜ਼ਰੂਰ ਆਵਾਂਗਾ / ਆਵਾਂਗੀ" : "I'LL BE THERE"}
-          </button>
-          
-          <button 
-            onClick={() => handleRSVP('no')}
-            className={`w-full sm:w-auto flex-1 border border-[#FAF7F2]/40 bg-transparent px-7 py-3 text-xs tracking-[0.2em] text-[#D4E0EB] hover:bg-[#FAF7F2]/10 hover:text-[#FAF7F2] transition-colors duration-300 uppercase font-semibold rounded-sm ${isPunjabi ? 'font-punjabi' : 'font-sans'}`}
-          >
-            {isPunjabi ? "ਅਫ਼ਸੋਸ, ਸ਼ਾਮਲ ਨਹੀਂ ਹੋ ਸਕਾਂਗੇ" : "CANNOT ATTEND"}
-          </button>
-        </div>
 
         {/* ── Official RSVP Family Contact Information ── */}
         <div className="bg-[#162B4D]/70 border border-[#C5A880]/35 p-6 sm:p-8 rounded-sm shadow-md max-w-md mx-auto relative mb-12">
