@@ -10,12 +10,14 @@ export default function MusicPlayer() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    audioRef.current = new Audio("/audio/wedding-music.mp3");
-    audioRef.current.loop = true;
-    
+    const audio = new Audio("/audio/wedding-music.webm");
+    audio.loop = true;
+    audio.preload = "auto";
+    audioRef.current = audio;
+
     const savedPreference = localStorage.getItem("wedding-music-playing");
     if (savedPreference === "true") {
-      audioRef.current.play().then(() => {
+      audio.play().then(() => {
         setIsPlaying(true);
       }).catch(() => {
         setIsPlaying(false);
@@ -25,6 +27,7 @@ export default function MusicPlayer() {
     return () => {
       if (audioRef.current) {
         audioRef.current.pause();
+        audioRef.current.src = "";
         audioRef.current = null;
       }
     };
@@ -38,9 +41,13 @@ export default function MusicPlayer() {
       setIsPlaying(false);
       localStorage.setItem("wedding-music-playing", "false");
     } else {
-      audioRef.current.play();
-      setIsPlaying(true);
-      localStorage.setItem("wedding-music-playing", "true");
+      audioRef.current.play().then(() => {
+        setIsPlaying(true);
+        localStorage.setItem("wedding-music-playing", "true");
+      }).catch((err) => {
+        console.warn("Audio playback prevented:", err);
+        setIsPlaying(false);
+      });
     }
   };
 
