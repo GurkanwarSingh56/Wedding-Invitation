@@ -46,7 +46,7 @@ export default function WeddingDay() {
           <div className="w-12 h-[1px] bg-[#C5A880]/60 mx-auto mb-5"></div>
 
           <p className={`text-base md:text-lg text-[#536479] italic max-w-lg mx-auto ${isPunjabi ? 'font-punjabi' : 'font-serif'}`}>
-            {isPunjabi 
+            {isPunjabi
               ? "ਸ਼ਗਨਾਂ ਦਾ ਦਿਨ, ਅਰਦਾਸਾਂ ਦਾ ਸਾਥ ਅਤੇ ਦੋ ਰੂਹਾਂ ਦਾ ਇੱਕ ਪਵਿੱਤਰ ਬੰਧਨ।"
               : "The sacred day of love, solemn vows, and divine blessings."}
           </p>
@@ -54,7 +54,7 @@ export default function WeddingDay() {
 
         {/* Schedule & Unified Anand Karaj Section */}
         <div className="space-y-10 sm:space-y-12">
-          
+
           {/* 1. Reception of Barat */}
           <motion.div
             initial="hidden"
@@ -126,13 +126,7 @@ export default function WeddingDay() {
               )}
             </div>
 
-            {/* 3. Followed By Lunch - Visually Connected Continuation with NO duplicate venue */}
-            <div className="pt-6 border-t border-[#C5A880]/30">
-              <span className="text-xs text-[#C5A880] block mb-1.5">✦</span>
-              <h4 className={`text-lg sm:text-xl text-[#0F223D] font-medium tracking-wide ${isPunjabi ? 'font-punjabi' : 'font-serif uppercase'}`}>
-                {isPunjabi ? weddingDay.lunch.namePunjabi : weddingDay.lunch.name}
-              </h4>
-            </div>
+
           </motion.div>
         </div>
       </div>

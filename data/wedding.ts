@@ -35,18 +35,18 @@ export const weddingData = {
   family: {
     grandparentsTitle: "BELOVED GRANDPARENTS",
     grandparentsTitlePunjabi: "ਸਤਿਕਾਰਯੋਗ ਦਾਦਾ-ਦਾਦੀ ਜੀ",
-    grandparents: "Ajit Singh & Kulwant Kaur",
-    grandparentsPunjabi: "ਅਜੀਤ ਸਿੰਘ & ਕੁਲਵੰਤ ਕੌਰ",
+    grandparents: "Sardar Ajit Singh & Sardarni Kulwant Kaur",
+    grandparentsPunjabi: "ਸਰਦਾਰ ਅਜੀਤ ਸਿੰਘ & ਸਰਦਾਰਨੀ ਕੁਲਵੰਤ ਕੌਰ",
 
     daughterTitle: "DAUGHTER OF",
     daughterTitlePunjabi: "ਸਪੁੱਤਰੀ",
-    daughterParents: "Amandeep Kaur & Amarjit Singh",
-    daughterParentsPunjabi: "ਅਮਨਦੀਪ ਕੌਰ & ਅਮਰਜੀਤ ਸਿੰਘ",
+    daughterParents: "Sardarni Amandeep Kaur & Sardar Amarjit Singh",
+    daughterParentsPunjabi: "ਸਰਦਾਰਨੀ ਅਮਨਦੀਪ ਕੌਰ & ਸਰਦਾਰ ਅਮਰਜੀਤ ਸਿੰਘ",
 
     sonTitle: "SON OF",
     sonTitlePunjabi: "ਸਪੁੱਤਰ",
-    sonParents: "Jaswinder Kaur & Gurcharan Singh",
-    sonParentsPunjabi: "ਜਸਵਿੰਦਰ ਕੌਰ & ਗੁਰਚਰਨ ਸਿੰਘ",
+    sonParents: "Sardarni Jaswinder Kaur & Sardar Gurcharan Singh",
+    sonParentsPunjabi: "ਸਰਦਾਰਨੀ ਜਸਵਿੰਦਰ ਕੌਰ & ਸਰਦਾਰ ਗੁਰਚਰਨ ਸਿੰਘ",
   },
 
   dates: {
@@ -79,7 +79,7 @@ export const weddingData = {
       addressPunjabi: "ਟਾਂਡਾ ਰੋਡ, ਹੁਸ਼ਿਆਰਪੁਰ",
       city: "Hoshiarpur, Punjab",
       cityPunjabi: "ਹੁਸ਼ਿਆਰਪੁਰ, ਪੰਜਾਬ",
-      googleMapsUrl: "https://share.google/XXsCwSdV5NL9gjUlz",
+      googleMapsUrl: "https://maps.app.goo.gl/gcDBEcU1gmaTkmFU6",
     },
   },
   events: {
@@ -145,10 +145,7 @@ export const weddingData = {
         time: "10:00 AM",
         timePunjabi: "ਸਵੇਰੇ 10:00 ਵਜੇ",
       },
-      lunch: {
-        name: "FOLLOWED BY LUNCH",
-        namePunjabi: "ਅਨੰਦ ਕਾਰਜ ਉਪਰੰਤ ਲੰਗਰ / ਦੁਪਹਿਰ ਦਾ ਭੋਜਨ",
-      },
+
     },
   },
   invitationMessage: {

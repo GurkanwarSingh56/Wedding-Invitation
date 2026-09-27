@@ -13,15 +13,23 @@ export default function MusicPlayer() {
     const audio = new Audio("/audio/wedding-music.webm");
     audio.loop = true;
     audio.preload = "auto";
+    audio.addEventListener("error", () => {
+      setIsPlaying(false);
+    });
     audioRef.current = audio;
 
     const savedPreference = localStorage.getItem("wedding-music-playing");
     if (savedPreference === "true") {
-      audio.play().then(() => {
-        setIsPlaying(true);
-      }).catch(() => {
-        setIsPlaying(false);
-      });
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            setIsPlaying(true);
+          })
+          .catch(() => {
+            setIsPlaying(false);
+          });
+      }
     }
 
     return () => {
@@ -41,13 +49,18 @@ export default function MusicPlayer() {
       setIsPlaying(false);
       localStorage.setItem("wedding-music-playing", "false");
     } else {
-      audioRef.current.play().then(() => {
-        setIsPlaying(true);
-        localStorage.setItem("wedding-music-playing", "true");
-      }).catch((err) => {
-        console.warn("Audio playback prevented:", err);
-        setIsPlaying(false);
-      });
+      const playPromise = audioRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            setIsPlaying(true);
+            localStorage.setItem("wedding-music-playing", "true");
+          })
+          .catch((err) => {
+            console.warn("Audio playback prevented:", err);
+            setIsPlaying(false);
+          });
+      }
     }
   };
 
