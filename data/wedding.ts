@@ -73,6 +73,9 @@ export const weddingData = {
       googleMapsUrl: "https://maps.google.com/?q=Gurudwara+Baba+Baghel+Singh+Hariana+Hoshiarpur",
     },
     anandKaraj: {
+      gurudwaraSahib: "Kalgidhar Charan Pawan Gurudwara",
+      gurudwaraSahibPunjabi: "ਕਾਲਗੀਧਰ ਚਰਨ ਪਵਨ ਗੁਰਦੁਆਰਾ",
+      gurudwaraSahibLocation: "https://maps.app.goo.gl/n42xUfr2Y5xXt9XW6",
       name: "Maharaja Farms",
       namePunjabi: "ਮਹਾਰਾਜਾ ਫਾਰਮਜ਼",
       address: "Tanda Road, Hoshiarpur",

@@ -99,18 +99,42 @@ export default function WeddingDay() {
 
             <div className="w-16 h-[1px] bg-[#C5A880]/50 mx-auto mb-8"></div>
 
-            {/* Anand Karaj Location Display */}
-            <div className="mb-8">
+            {/* Anand Karaj Gurudwara Sahib Ceremony */}
+            <div className="mb-7">
               <div className="flex items-center justify-center gap-1.5 mb-2 text-[#C5A880]">
                 <MapPin className="w-4 h-4" />
                 <span className={`text-[11px] sm:text-xs tracking-[0.2em] uppercase font-semibold ${isPunjabi ? 'font-punjabi' : 'font-sans'}`}>
-                  {isPunjabi ? "ਸਥਾਨ" : "LOCATION"}
+                  {isPunjabi ? "ਗੁਰਦੁਆਰਾ ਸਾਹਿਬ" : "CEREMONY VENUE"}
                 </span>
               </div>
+              <p className={`text-2xl sm:text-3xl text-[#0F223D] font-medium mb-4 ${isPunjabi ? 'font-punjabi' : 'font-serif'}`}>
+                {isPunjabi ? venue.gurudwaraSahibPunjabi : venue.gurudwaraSahib}
+              </p>
+
+              {venue.gurudwaraSahibLocation && (
+                <a
+                  href={venue.gurudwaraSahibLocation}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`inline-block border border-[#0F223D] px-6 py-2.5 text-xs tracking-[0.2em] text-[#0F223D] hover:bg-[#0F223D] hover:text-[#FAF7F2] transition-colors duration-300 uppercase font-semibold rounded-sm ${isPunjabi ? 'font-punjabi' : 'font-sans'}`}
+                >
+                  {isPunjabi ? "ਗੁਰਦੁਆਰਾ ਸਾਹਿਬ ਸਥਾਨ" : "VIEW GURUDWARA LOCATION"}
+                </a>
+              )}
+            </div>
+
+            {/* Subtle Divider */}
+            <div className="w-12 h-[1px] bg-[#C5A880]/40 mx-auto my-7"></div>
+
+            {/* Followed by Lunch at Maharaja Farms */}
+            <div className="mt-2">
+              <span className={`text-[11px] sm:text-xs tracking-[0.2em] text-[#C5A880] uppercase font-semibold block mb-2 ${isPunjabi ? 'font-punjabi' : 'font-sans'}`}>
+                {isPunjabi ? "ਤਦ ਉਪਰੰਤ ਵਿਆਹ ਸਮਾਗਮ" : "FOLLOWED BY WEDDING AT"}
+              </span>
               <p className={`text-2xl sm:text-3xl text-[#0F223D] font-medium mb-1 ${isPunjabi ? 'font-punjabi' : 'font-serif'}`}>
                 {isPunjabi ? venue.namePunjabi : venue.name}
               </p>
-              <p className={`text-sm text-[#536479] mb-6 ${isPunjabi ? 'font-punjabi' : 'font-sans'}`}>
+              <p className={`text-sm text-[#536479] mb-5 ${isPunjabi ? 'font-punjabi' : 'font-sans'}`}>
                 {isPunjabi ? venue.addressPunjabi : venue.address}
               </p>
 
@@ -119,14 +143,12 @@ export default function WeddingDay() {
                   href={venue.googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`inline-block border border-[#0F223D] px-7 py-3 text-xs tracking-[0.2em] text-[#0F223D] hover:bg-[#0F223D] hover:text-[#FAF7F2] transition-colors duration-300 uppercase font-semibold rounded-sm ${isPunjabi ? 'font-punjabi' : 'font-sans'}`}
+                  className={`inline-block border border-[#0F223D] px-6 py-2.5 text-xs tracking-[0.2em] text-[#0F223D] hover:bg-[#0F223D] hover:text-[#FAF7F2] transition-colors duration-300 uppercase font-semibold rounded-sm ${isPunjabi ? 'font-punjabi' : 'font-sans'}`}
                 >
                   {isPunjabi ? "ਸਥਾਨ ਵੇਖੋ" : "VIEW LOCATION"}
                 </a>
               )}
             </div>
-
-
           </motion.div>
         </div>
       </div>
