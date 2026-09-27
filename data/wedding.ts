@@ -26,27 +26,55 @@ export const weddingData = {
   },
   groom: {
     first: "Puneet",
-    last: "Saini",
-    full: "Puneet Saini",
-    punjabi: "ਪੁਨੀਤ ਸੈਣੀ",
+    last: "Singh",
+    full: "Puneet Singh",
+    punjabi: "ਪੁਨੀਤ ਸਿੰਘ",
   },
-  // Grandparents must appear BEFORE parents as requested
-  grandparents: {
-    grandmother: "Sardarni Kulwant Kaur",
-    grandfather: "Sr. Ajit Singh",
-    grandmotherPunjabi: "ਸਰਦਾਰਨੀ ਕੁਲਵੰਤ ਕੌਰ",
-    grandfatherPunjabi: "ਸ੍ਰ. ਅਜੀਤ ਸਿੰਘ",
-    title: "Grandparents",
-    titlePunjabi: "ਦਾਦਾ-ਦਾਦੀ ਜੀ",
+  
+  // Both sides of the family
+  family: {
+    groom: {
+      grandsonTitle: "BELOVED GRANDSON OF",
+      grandsonTitlePunjabi: "ਲਾਡਲੇ ਪੋਤਰੇ ਅਤੇ ਦੋਹਤੇ",
+      paternalGrandparents: {
+        names: "Late Smt. Sheela Devi  &  Sh. Brij Lal",
+        namesPunjabi: "ਸਵ: ਸ਼੍ਰੀਮਤੀ ਸ਼ੀਲਾ ਦੇਵੀ  &  ਸ਼੍ਰੀ ਬ੍ਰਿਜ ਲਾਲ",
+        relation: "Dadi Ji & Dada Ji",
+        relationPunjabi: "ਦਾਦੀ ਜੀ ਅਤੇ ਦਾਦਾ ਜੀ",
+      },
+      maternalGrandparents: {
+        names: "Late Smt. Harbhajan Kaur  &  Sh. Vas Dev",
+        namesPunjabi: "ਸਵ: ਸ਼੍ਰੀਮਤੀ ਹਰਭਜਨ ਕੌਰ  &  ਸ਼੍ਰੀ ਵਾਸ ਦੇਵ",
+        relation: "Nani Ji & Nana Ji",
+        relationPunjabi: "ਨਾਨੀ ਜੀ ਅਤੇ ਨਾਨਾ ਜੀ",
+      },
+      sonTitle: "SON OF",
+      sonTitlePunjabi: "ਸਪੁੱਤਰ",
+      parents: {
+        mother: "Sdn. Jaswinder Kaur",
+        father: "S. Gurcharan Singh",
+        motherPunjabi: "ਸਰਦਾਰਨੀ ਜਸਵਿੰਦਰ ਕੌਰ",
+        fatherPunjabi: "ਸ. ਗੁਰਚਰਨ ਸਿੰਘ",
+      },
+    },
+    bride: {
+      daughterTitle: "DAUGHTER OF",
+      daughterTitlePunjabi: "ਸਪੁੱਤਰੀ",
+      parents: {
+        mother: "Sdn. Amandeep Kaur",
+        father: "S. Amarjit Singh",
+        motherPunjabi: "ਸਰਦਾਰਨੀ ਅਮਨਦੀਪ ਕੌਰ",
+        fatherPunjabi: "ਸ. ਅਮਰਜੀਤ ਸਿੰਘ",
+      },
+      grandparentsTitle: "GRANDPARENTS",
+      grandparentsTitlePunjabi: "ਦਾਦਾ-ਦਾਦੀ ਜੀ",
+      grandparents: {
+        names: "Sdn. Kulwant Kaur  &  S. Ajit Singh",
+        namesPunjabi: "ਸਰਦਾਰਨੀ ਕੁਲਵੰਤ ਕੌਰ  &  ਸ. ਅਜੀਤ ਸਿੰਘ",
+      },
+    },
   },
-  parents: {
-    mother: "Sdn. Amandeep Kaur",
-    father: "S. Amarjit Singh",
-    motherPunjabi: "ਸਰਦਾਰਨੀ ਅਮਨਦੀਪ ਕੌਰ",
-    fatherPunjabi: "ਸ. ਅਮਰਜੀਤ ਸਿੰਘ",
-    title: "Parents",
-    titlePunjabi: "ਮਾਤਾ-ਪਿਤਾ ਜੀ",
-  },
+
   dates: {
     day1Date: "13 NOVEMBER 2026",
     day1Day: "FRIDAY",
@@ -118,7 +146,6 @@ export const weddingData = {
       day: "FRIDAY",
       datePunjabi: "13 ਨਵੰਬਰ 2026",
       dayPunjabi: "ਸ਼ੁੱਕਰਵਾਰ",
-      // Important: time is unconfirmed, set to ""
       time: "6:00 PM",
       timePunjabi: "ਸ਼ਾਮ 6:00 ਵਜੇ",
       defaultTimeText: "TIME TO BE ANNOUNCED",
@@ -147,18 +174,14 @@ export const weddingData = {
       lunch: {
         name: "FOLLOWED BY LUNCH",
         namePunjabi: "ਅਨੰਦ ਕਾਰਜ ਉਪਰੰਤ ਲੰਗਰ / ਦੁਪਹਿਰ ਦਾ ਭੋਜਨ",
-        venueName: "Maharaja Farms",
-        venueNamePunjabi: "ਮਹਾਰਾਜਾ ਫਾਰਮਜ਼",
-        address: "Tanda Road, Hoshiarpur",
-        addressPunjabi: "ਟਾਂਡਾ ਰੋਡ, ਹੁਸ਼ਿਆਰਪੁਰ",
       },
     },
   },
   invitationMessage: {
     title: "With Joyous Hearts",
     titlePunjabi: "ਖੁਸ਼ੀਆਂ ਭਰਿਆ ਸੱਦਾ",
-    lead: "With hearts full of gratitude and love, we warmly invite you to grace the wedding celebrations of our beloved Dilpreet.",
-    leadPunjabi: "ਵਾਹਿਗੁਰੂ ਜੀ ਦੀ ਅਪਾਰ ਕਿਰਪਾ ਸਦਕਾ, ਅਸੀਂ ਤੁਹਾਨੂੰ ਆਪਣੀ ਲਾਡਲੀ ਦਿਲਪ੍ਰੀਤ ਦੇ ਵਿਆਹ ਸਮਾਗਮਾਂ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋ ਕੇ ਖੁਸ਼ੀਆਂ ਵਧਾਉਣ ਲਈ ਦਿਲੋਂ ਸੱਦਾ ਦਿੰਦੇ ਹਾਂ।",
+    lead: "With hearts full of gratitude and love, we warmly invite you to grace the wedding celebrations of our beloved Dilpreet and Puneet.",
+    leadPunjabi: "ਵਾਹਿਗੁਰੂ ਜੀ ਦੀ ਅਪਾਰ ਕਿਰਪਾ ਸਦਕਾ, ਅਸੀਂ ਤੁਹਾਨੂੰ ਆਪਣੀ ਲਾਡਲੀ ਦਿਲਪ੍ਰੀਤ ਅਤੇ ਪੁਨੀਤ ਦੇ ਵਿਆਹ ਸਮਾਗਮਾਂ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋ ਕੇ ਖੁਸ਼ੀਆਂ ਵਧਾਉਣ ਲਈ ਦਿਲੋਂ ਸੱਦਾ ਦਿੰਦੇ ਹਾਂ।",
     closing: "Your blessings and warm presence will make these auspicious moments truly memorable for our family.",
     closingPunjabi: "ਆਪ ਜੀ ਦੀਆਂ ਅਸੀਸਾਂ ਅਤੇ ਪਿਆਰੀ ਹਾਜ਼ਰੀ ਸਾਡੇ ਪਰਿਵਾਰ ਲਈ ਇਹਨਾਂ ਪਲਾਂ ਨੂੰ ਸਦਾ ਲਈ ਯਾਦਗਾਰ ਬਣਾ ਦੇਵੇਗੀ।",
   },
@@ -166,33 +189,6 @@ export const weddingData = {
     whatsappNumber: "919876543210", // Easy to edit
   },
   images: {
-    hero: "/images/hero.jpg",
-    gallery: [
-      {
-        src: "/images/gallery-1.jpg",
-        title: "Anand Karaj • Sacred Presence",
-        titlePunjabi: "ਅਨੰਦ ਕਾਰਜ • ਗੁਰੂ ਹਜ਼ੂਰੀ",
-      },
-      {
-        src: "/images/gallery-2.jpg",
-        title: "The Sacred Palla Ceremony",
-        titlePunjabi: "ਪੱਲੇ ਦੀ ਰਸਮ",
-      },
-      {
-        src: "/images/gallery-3.jpg",
-        title: "The Four Holy Laavan",
-        titlePunjabi: "ਚਾਰ ਲਾਵਾਂ ਦੀ ਪਰਕਰਮਾ",
-      },
-      {
-        src: "/images/gallery-4.jpg",
-        title: "Dilpreet & Puneet",
-        titlePunjabi: "ਦਿਲਪ੍ਰੀਤ ਅਤੇ ਪੁਨੀਤ",
-      },
-      {
-        src: "/images/gallery-5.jpg",
-        title: "Under Divine Grace",
-        titlePunjabi: "ਗੁਰੂ ਸਾਹਿਬ ਦੀ ਅਪਾਰ ਕਿਰਪਾ",
-      },
-    ],
+    heroIllustration: "/images/gallery-1.jpg",
   },
 };

@@ -28,13 +28,19 @@ const greatVibes = Great_Vibes({
 });
 
 export const metadata: Metadata = {
-  title: "Dilpreet Kaur & Puneet Saini | Wedding Invitation",
-  description: "With the blessings of Waheguru Ji, you are cordially invited to celebrate the wedding celebrations of Dilpreet Kaur and Puneet Saini.",
+  title: "Dilpreet Kaur & Puneet Singh | Wedding Invitation",
+  description: "With the blessings of Waheguru Ji, you are cordially invited to celebrate the wedding celebrations of Dilpreet Kaur and Puneet Singh on 13-14 November 2026.",
   metadataBase: new URL('https://dilpreet-wedding.vercel.app'),
   openGraph: {
-    title: "Dilpreet Kaur & Puneet Saini | Wedding Invitation",
-    description: "With the blessings of Waheguru Ji, you are cordially invited to celebrate the wedding celebrations of Dilpreet Kaur and Puneet Saini.",
-    images: [{ url: "/images/hero-placeholder.jpg" }],
+    title: "Dilpreet Kaur & Puneet Singh | Wedding Invitation",
+    description: "With the blessings of Waheguru Ji, you are cordially invited to celebrate the wedding celebrations of Dilpreet Kaur and Puneet Singh on 13-14 November 2026.",
+    images: [{ url: "/images/gallery-1.jpg" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dilpreet Kaur & Puneet Singh | Wedding Invitation",
+    description: "With the blessings of Waheguru Ji, you are cordially invited to celebrate the wedding celebrations of Dilpreet Kaur and Puneet Singh on 13-14 November 2026.",
+    images: ["/images/gallery-1.jpg"],
   },
 };
 
