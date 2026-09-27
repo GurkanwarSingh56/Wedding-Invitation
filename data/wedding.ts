@@ -30,7 +30,7 @@ export const weddingData = {
     full: "Puneet Singh",
     punjabi: "ਪੁਨੀਤ ਸਿੰਘ",
   },
-  
+
   // Family hierarchy with exact specified names
   family: {
     grandparentsTitle: "BELOVED GRANDPARENTS",
@@ -154,8 +154,8 @@ export const weddingData = {
   invitationMessage: {
     title: "With Joyous Hearts",
     titlePunjabi: "ਖੁਸ਼ੀਆਂ ਭਰਿਆ ਸੱਦਾ",
-    lead: "With hearts full of gratitude and love, we warmly invite you to grace the wedding celebrations of our beloved Dilpreet and Puneet.",
-    leadPunjabi: "ਵਾਹਿਗੁਰੂ ਜੀ ਦੀ ਅਪਾਰ ਕਿਰਪਾ ਸਦਕਾ, ਅਸੀਂ ਤੁਹਾਨੂੰ ਆਪਣੀ ਲਾਡਲੀ ਦਿਲਪ੍ਰੀਤ ਅਤੇ ਪੁਨੀਤ ਦੇ ਵਿਆਹ ਸਮਾਗਮਾਂ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋ ਕੇ ਖੁਸ਼ੀਆਂ ਵਧਾਉਣ ਲਈ ਦਿਲੋਂ ਸੱਦਾ ਦਿੰਦੇ ਹਾਂ।",
+    lead: "With hearts full of gratitude and love, we warmly invite you to grace the wedding celebrations of our beloved Dilpreet.",
+    leadPunjabi: "ਵਾਹਿਗੁਰੂ ਜੀ ਦੀ ਅਪਾਰ ਕਿਰਪਾ ਸਦਕਾ, ਅਸੀਂ ਤੁਹਾਨੂੰ ਆਪਣੀ ਲਾਡਲੀ ਦਿਲਪ੍ਰੀਤ ਦੇ ਵਿਆਹ ਸਮਾਗਮਾਂ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋ ਕੇ ਖੁਸ਼ੀਆਂ ਵਧਾਉਣ ਲਈ ਦਿਲੋਂ ਸੱਦਾ ਦਿੰਦੇ ਹਾਂ।",
     closing: "Your blessings and warm presence will make these auspicious moments truly memorable for our family.",
     closingPunjabi: "ਆਪ ਜੀ ਦੀਆਂ ਅਸੀਸਾਂ ਅਤੇ ਪਿਆਰੀ ਹਾਜ਼ਰੀ ਸਾਡੇ ਪਰਿਵਾਰ ਲਈ ਇਹਨਾਂ ਪਲਾਂ ਨੂੰ ਸਦਾ ਲਈ ਯਾਦਗਾਰ ਬਣਾ ਦੇਵੇਗੀ।",
   },
