@@ -31,48 +31,22 @@ export const weddingData = {
     punjabi: "ਪੁਨੀਤ ਸਿੰਘ",
   },
   
-  // Both sides of the family
+  // Family hierarchy with exact specified names
   family: {
-    groom: {
-      grandsonTitle: "BELOVED GRANDSON OF",
-      grandsonTitlePunjabi: "ਲਾਡਲੇ ਪੋਤਰੇ ਅਤੇ ਦੋਹਤੇ",
-      paternalGrandparents: {
-        names: "Late Smt. Sheela Devi  &  Sh. Brij Lal",
-        namesPunjabi: "ਸਵ: ਸ਼੍ਰੀਮਤੀ ਸ਼ੀਲਾ ਦੇਵੀ  &  ਸ਼੍ਰੀ ਬ੍ਰਿਜ ਲਾਲ",
-        relation: "Dadi Ji & Dada Ji",
-        relationPunjabi: "ਦਾਦੀ ਜੀ ਅਤੇ ਦਾਦਾ ਜੀ",
-      },
-      maternalGrandparents: {
-        names: "Late Smt. Harbhajan Kaur  &  Sh. Vas Dev",
-        namesPunjabi: "ਸਵ: ਸ਼੍ਰੀਮਤੀ ਹਰਭਜਨ ਕੌਰ  &  ਸ਼੍ਰੀ ਵਾਸ ਦੇਵ",
-        relation: "Nani Ji & Nana Ji",
-        relationPunjabi: "ਨਾਨੀ ਜੀ ਅਤੇ ਨਾਨਾ ਜੀ",
-      },
-      sonTitle: "SON OF",
-      sonTitlePunjabi: "ਸਪੁੱਤਰ",
-      parents: {
-        mother: "Sdn. Jaswinder Kaur",
-        father: "S. Gurcharan Singh",
-        motherPunjabi: "ਸਰਦਾਰਨੀ ਜਸਵਿੰਦਰ ਕੌਰ",
-        fatherPunjabi: "ਸ. ਗੁਰਚਰਨ ਸਿੰਘ",
-      },
-    },
-    bride: {
-      daughterTitle: "DAUGHTER OF",
-      daughterTitlePunjabi: "ਸਪੁੱਤਰੀ",
-      parents: {
-        mother: "Sdn. Amandeep Kaur",
-        father: "S. Amarjit Singh",
-        motherPunjabi: "ਸਰਦਾਰਨੀ ਅਮਨਦੀਪ ਕੌਰ",
-        fatherPunjabi: "ਸ. ਅਮਰਜੀਤ ਸਿੰਘ",
-      },
-      grandparentsTitle: "GRANDPARENTS",
-      grandparentsTitlePunjabi: "ਦਾਦਾ-ਦਾਦੀ ਜੀ",
-      grandparents: {
-        names: "Sdn. Kulwant Kaur  &  S. Ajit Singh",
-        namesPunjabi: "ਸਰਦਾਰਨੀ ਕੁਲਵੰਤ ਕੌਰ  &  ਸ. ਅਜੀਤ ਸਿੰਘ",
-      },
-    },
+    grandparentsTitle: "BELOVED GRANDPARENTS",
+    grandparentsTitlePunjabi: "ਸਤਿਕਾਰਯੋਗ ਦਾਦਾ-ਦਾਦੀ ਜੀ",
+    grandparents: "Ajit Singh & Kulwant Kaur",
+    grandparentsPunjabi: "ਅਜੀਤ ਸਿੰਘ & ਕੁਲਵੰਤ ਕੌਰ",
+
+    daughterTitle: "DAUGHTER OF",
+    daughterTitlePunjabi: "ਸਪੁੱਤਰੀ",
+    daughterParents: "Amandeep Kaur & Amarjit Singh",
+    daughterParentsPunjabi: "ਅਮਨਦੀਪ ਕੌਰ & ਅਮਰਜੀਤ ਸਿੰਘ",
+
+    sonTitle: "SON OF",
+    sonTitlePunjabi: "ਸਪੁੱਤਰ",
+    sonParents: "Jaswinder Kaur & Gurcharan Singh",
+    sonParentsPunjabi: "ਜਸਵਿੰਦਰ ਕੌਰ & ਗੁਰਚਰਨ ਸਿੰਘ",
   },
 
   dates: {
@@ -105,7 +79,7 @@ export const weddingData = {
       addressPunjabi: "ਟਾਂਡਾ ਰੋਡ, ਹੁਸ਼ਿਆਰਪੁਰ",
       city: "Hoshiarpur, Punjab",
       cityPunjabi: "ਹੁਸ਼ਿਆਰਪੁਰ, ਪੰਜਾਬ",
-      googleMapsUrl: "https://maps.google.com/?q=Maharaja+Farms+Tanda+Road+Hoshiarpur",
+      googleMapsUrl: "https://share.google/XXsCwSdV5NL9gjUlz",
     },
   },
   events: {
@@ -186,7 +160,15 @@ export const weddingData = {
     closingPunjabi: "ਆਪ ਜੀ ਦੀਆਂ ਅਸੀਸਾਂ ਅਤੇ ਪਿਆਰੀ ਹਾਜ਼ਰੀ ਸਾਡੇ ਪਰਿਵਾਰ ਲਈ ਇਹਨਾਂ ਪਲਾਂ ਨੂੰ ਸਦਾ ਲਈ ਯਾਦਗਾਰ ਬਣਾ ਦੇਵੇਗੀ।",
   },
   rsvp: {
-    whatsappNumber: "919876543210", // Easy to edit
+    whatsappNumber: "919876543210",
+    familyTitle: "Dheri Family",
+    familyTitlePunjabi: "ਢੇਰੀ ਪਰਿਵਾਰ",
+    cellLabel: "Cell",
+    cellLabelPunjabi: "ਫ਼ੋਨ ਨੰਬਰ",
+    phones: [
+      { display: "9463118080", tel: "9463118080" },
+      { display: "9417836945", tel: "9417836945" },
+    ],
   },
   images: {
     heroIllustration: "/images/gallery-1.jpg",

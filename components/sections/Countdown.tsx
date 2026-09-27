@@ -46,7 +46,7 @@ export default function Countdown() {
   if (!isClient) return null; // Avoid hydration mismatch
 
   return (
-    <section className="py-20 md:py-24 px-4 bg-[#0F223D] text-[#FAF7F2] text-center border-y border-[#C5A880]/30 relative overflow-hidden">
+    <section className="py-14 sm:py-16 md:py-20 px-4 bg-[#0F223D] text-[#FAF7F2] text-center border-b border-[#C5A880]/30 relative overflow-hidden">
       {/* Subtle Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#162B4D] via-[#0F223D] to-[#0A192F] opacity-70 pointer-events-none"></div>
 
