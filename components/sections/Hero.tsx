@@ -29,18 +29,16 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, delay: 0.15 }}
-          className="relative w-full max-w-[260px] sm:max-w-[320px] md:max-w-[360px] aspect-[4/3] mx-auto mb-6 sm:mb-8 rounded-sm overflow-hidden border border-[#C5A880]/40 shadow-sm bg-[#F4EFE6]"
+          className="relative w-full max-w-[320px] sm:max-w-[420px] md:max-w-[480px] aspect-[4/3] mx-auto mb-8 sm:mb-10 rounded-md overflow-hidden border border-[#C5A880]/40 shadow-sm bg-[#F4EFE6]"
         >
           <Image
             src={weddingData.images.heroIllustration}
-            alt="Illustration of a Sikh bride and groom during Anand Karaj ceremony"
+            alt="Anand Karaj Sikh Wedding Ceremony"
             fill
-            sizes="(max-width: 640px) 260px, (max-width: 768px) 320px, 360px"
+            sizes="(max-width: 640px) 320px, (max-width: 768px) 420px, 480px"
             priority
             className="object-cover"
           />
-          {/* Gentle vignette blend */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#FAF7F2]/40 via-transparent to-transparent pointer-events-none"></div>
         </motion.div>
 
         {/* Sacred Ik Onkar Symbol */}
