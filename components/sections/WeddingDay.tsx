@@ -110,8 +110,11 @@ export default function WeddingDay() {
               <p className={`text-2xl sm:text-3xl text-blue-deep font-medium mb-4 ${isPunjabi ? 'font-punjabi' : 'font-serif'}`}>
                 {isPunjabi ? venue.gurudwaraSahibPunjabi : venue.gurudwaraSahib}
               </p>
-
+              <p className={`text-sm text-slate-muted mb-5 ${isPunjabi ? 'font-punjabi' : 'font-sans'}`}>
+                {isPunjabi ? venue.gurudwaraSahibLocationPunjabi : venue.gurudwaraSahibLocation}
+              </p>
             </div>
+
 
             {/* Subtle Divider */}
             <div className="w-12 h-px bg-gold-antique/40 mx-auto my-7"></div>
