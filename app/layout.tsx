@@ -1,7 +1,13 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, DM_Sans, Noto_Sans_Gurmukhi, Great_Vibes } from "next/font/google";
+import { Cinzel, Cormorant_Garamond, DM_Sans, Noto_Sans_Gurmukhi, Great_Vibes } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/lib/LanguageContext";
+
+const cinzel = Cinzel({
+  variable: "--font-cinzel",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+});
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -54,7 +60,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${dmSans.variable} ${notoGurmukhi.variable} ${greatVibes.variable} scroll-smooth`}>
+    <html lang="en" className={`${cinzel.variable} ${cormorant.variable} ${dmSans.variable} ${notoGurmukhi.variable} ${greatVibes.variable} scroll-smooth`}>
       <body className="antialiased min-h-screen selection:bg-[#C5A880] selection:text-[#0F223D]">
         <LanguageProvider>
           {children}

@@ -7,14 +7,12 @@ import WeddingDay from "@/components/sections/WeddingDay";
 import Countdown from "@/components/sections/Countdown";
 import RSVP from "@/components/sections/RSVP";
 import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
-import MusicPlayer from "@/components/ui/MusicPlayer";
 
 export default function Home() {
   return (
-    <main className="relative bg-[#FAF7F2] text-[#0F223D] min-h-screen">
+    <main className="relative bg-cream-warm text-blue-deep min-h-screen">
       {/* Floating Global Controls */}
       <LanguageSwitcher />
-      <MusicPlayer />
       
       {/* Seamless Editorial Invitation Flow */}
       <div className="relative">

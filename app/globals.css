@@ -19,7 +19,8 @@
   --color-gold-subtle: #D8C3A5;
   --color-slate-muted: #536479;
   
-  --font-serif: var(--font-cormorant);
+  --font-serif: var(--font-cinzel), serif;
+  --font-cormorant: var(--font-cormorant), serif;
   --font-sans: var(--font-dm-sans);
   --font-punjabi: var(--font-noto-gurmukhi);
   --font-script: var(--font-great-vibes);

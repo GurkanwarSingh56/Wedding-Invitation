@@ -35,17 +35,17 @@ export const weddingData = {
   family: {
     grandparentsTitle: "BELOVED GRANDPARENTS",
     grandparentsTitlePunjabi: "ਸਤਿਕਾਰਯੋਗ ਦਾਦਾ-ਦਾਦੀ ਜੀ",
-    grandparents: "Sardar Ajit Singh & Sardarni Kulwant Kaur",
+    grandparents: "Sr. Ajit Singh & Sdn Kulwant Kaur",
     grandparentsPunjabi: "ਸਰਦਾਰ ਅਜੀਤ ਸਿੰਘ & ਸਰਦਾਰਨੀ ਕੁਲਵੰਤ ਕੌਰ",
 
     daughterTitle: "DAUGHTER OF",
     daughterTitlePunjabi: "ਸਪੁੱਤਰੀ",
-    daughterParents: "Sardarni Amandeep Kaur & Sardar Amarjit Singh",
+    daughterParents: "Sdn Amandeep Kaur & Sr. Amarjit Singh",
     daughterParentsPunjabi: "ਸਰਦਾਰਨੀ ਅਮਨਦੀਪ ਕੌਰ & ਸਰਦਾਰ ਅਮਰਜੀਤ ਸਿੰਘ",
 
     sonTitle: "SON OF",
     sonTitlePunjabi: "ਸਪੁੱਤਰ",
-    sonParents: "Sardarni Jaswinder Kaur & Sardar Gurcharan Singh",
+    sonParents: "Sdn Jaswinder Kaur & Sr. Gurcharan Singh",
     sonParentsPunjabi: "ਸਰਦਾਰਨੀ ਜਸਵਿੰਦਰ ਕੌਰ & ਸਰਦਾਰ ਗੁਰਚਰਨ ਸਿੰਘ",
   },
 
@@ -75,7 +75,6 @@ export const weddingData = {
     anandKaraj: {
       gurudwaraSahib: "Kalgidhar Charan Pawan Gurudwara",
       gurudwaraSahibPunjabi: "ਕਾਲਗੀਧਰ ਚਰਨ ਪਵਨ ਗੁਰਦੁਆਰਾ",
-      gurudwaraSahibLocation: "https://maps.app.goo.gl/n42xUfr2Y5xXt9XW6",
       name: "Maharaja Farms",
       namePunjabi: "ਮਹਾਰਾਜਾ ਫਾਰਮਜ਼",
       address: "Tanda Road, Hoshiarpur",
@@ -113,12 +112,10 @@ export const weddingData = {
         timePunjabi: "ਦੁਪਹਿਰ 1:00 ਵਜੇ",
       },
     },
-    // 13 November 2026 (Friday) - Jaggo & DJ
+    // 13 November 2026 (Friday) - Jaggo
     jaggo: {
       title: "JAGGO",
       titlePunjabi: "ਜਾਗੋ",
-      secondaryTitle: "DJ",
-      secondaryTitlePunjabi: "ਡੀਜੇ",
       date: "13 NOVEMBER 2026",
       day: "FRIDAY",
       datePunjabi: "13 ਨਵੰਬਰ 2026",
